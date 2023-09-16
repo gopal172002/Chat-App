@@ -4,7 +4,9 @@ const cron = require("node-cron");
 const CryptoJS = require("crypto-js");
 const bcrypt = require("bcryptjs");
 
-mongoose.connect("mongodb+srv://gopalkalsiya1h:Gopal172002@cluster0.ggzm5fi.mongodb.net/chatapp", {
+require('dotenv').config();
+const url = process.env.MONGO_URL;
+mongoose.connect('url', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
